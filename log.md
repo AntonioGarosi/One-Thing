@@ -46,3 +46,7 @@ After some research on tree structures and decision threes, and a prayer to Ron 
 These sketches might be confusing, but only because they really are. But in this way - shoving down confusion over a sheet of paper - I made some clarity on my mind and it's time to move on.
 
 The next steps will be to make a development roadmap and start to prototype the various managers of the game.
+
+### 14:29
+I haven't wrote a single line of code yet, but it's definitely time for a lunch break.
+![lunch](log_media/lunch.jpg)
