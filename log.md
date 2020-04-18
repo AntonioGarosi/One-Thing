@@ -18,3 +18,10 @@ Ok, a short breakfast but a long phone call later I'm finally ready. The jam is 
 Many pro at this point already have sketched narratives and mechanisms, figured out graphic designs, tested prototypes and few might be even close to submission.
 I don't even know where to start.
 Let's grab some pen & paper and get some shit together.
+
+### 12:28
+Hey! After two pages of random notes I've an idea!
+
+![notes](log_media/notes.jpg)
+
+And a name for it! My game will be called **One Thing**
