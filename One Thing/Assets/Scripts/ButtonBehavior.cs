@@ -12,27 +12,21 @@ public class ButtonBehavior : MonoBehaviour
     private Image targetImage;
     private Image iconImage;
 
-    // Start is called before the first frame update
     void Start()
     {
+        // How to deal with black pixels?
         targetImage = this.transform.Find("Target Image").GetComponent<Image>();
         iconImage = this.transform.Find("Icon Image").GetComponent<Image>();
         targetImage.sprite = iconImage.sprite;
         targetImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, iconImage.rectTransform.rect.width + highlightOffset);
         targetImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, iconImage.rectTransform.rect.height + highlightOffset);
         ColorBlock tmpBlock = transform.GetComponent<Button>().colors;
-        Debug.Log(tmpBlock.highlightedColor);
         tmpBlock.highlightedColor = highlightColor;
         tmpBlock.normalColor = defaultColor;
         transform.GetComponent<Button>().colors = tmpBlock;
-        Debug.Log(tmpBlock.highlightedColor);
     }
 
-    // Update is called once per frame
     void Update()
-    {
-        
+    {   
     }
-
-    //When highlighted set image tint to highlight color and alpha to 1    
 }

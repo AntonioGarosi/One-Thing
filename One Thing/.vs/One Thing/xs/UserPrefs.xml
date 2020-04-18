@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{FCC7D10F-BF80-CC78-EDEE-68DB318133B7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ButtonBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TextBehavior.cs">
     <Files>
-      <File FileName="Assets/Scripts/ButtonBehavior.cs" Line="26" Column="45" />
+      <File FileName="Assets/Scripts/ButtonBehavior.cs" Line="30" Column="6" />
+      <File FileName="Assets/Scripts/TextBehavior.cs" Line="7" Column="8" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,7 +10,7 @@
           <Node name="One Thing" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="ButtonBehavior.cs" selected="True" />
+                <Node name="TextBehavior.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -19,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8594fd00-172c-45dc-9f9e-48983ef2aea4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ff9b48c0-7236-4a74-a4e0-787e12cafb5e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
