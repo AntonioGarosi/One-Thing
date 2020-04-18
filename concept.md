@@ -28,6 +28,6 @@ A music will outline every game part. With the advancement of the game or during
 
 ## Tools
 - Unity
-- Piskel
+- Visual Studio
 - GIMP
 - Audacity

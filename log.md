@@ -8,7 +8,7 @@ In my initial brainstorming, the only idea I came up with was as ridiculous as i
 
 > "The quest of a man to make disco music hype again"
 
-Yeah, that sounds fun. But I've to come up with more apt ideas.
+Yeah, that sounds fun but honestly is nothing more than that. But I've to come up with more apt ideas.
 Not before breakfast though.
 
 ![Breakfast](log_media/breakfast.jpg)
@@ -25,3 +25,9 @@ Hey! After two pages of random notes I've an idea!
 ![notes](log_media/notes.jpg)
 
 And a name for it! My game will be called **One Thing**
+
+### 13:18
+Ok, I think I nailed out a concept and some game mechanics. I've also opted to choose Unity as environment for its fast prototyping approach.
+I haven't opened it in the last couple of years, but what could have possibly changed in the meantime?
+
+Oh, jeez. Yes. Everything. This is going to be harsh.
