@@ -57,3 +57,7 @@ After two hours of coding I was able just to test a very dull UI experiment.
 ![First test](log_media/first-test.jpg)
 
 But - hey ! - at least it works.
+
+### 18:51
+More text on UI elements and behavior.
+Time for a pause because my son wants to play with Minecraft.

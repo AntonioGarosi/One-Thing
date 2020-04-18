@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 30422
+  controlID: 35381
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,23 +94,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 847
-      height: 404
+      width: 1440
+      height: 677
     m_Scale: {x: 1.6690086, y: 1.6690086}
-    m_Translation: {x: 423.5, y: 202}
+    m_Translation: {x: 720, y: 338.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -253.74345
-      y: -121.02993
-      width: 507.4869
-      height: 242.05986
+      x: -431.39383
+      y: -202.81502
+      width: 862.78766
+      height: 405.63004
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1694, y: 850}
+  m_LastWindowPixelSize: {x: 2880, y: 1396}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 30382
+  controlID: 35382
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 30383
+  controlID: 35383
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,8 +221,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
+      m_SelectedIDs: 24faffff
+      m_LastClickedID: -1500
       m_ExpandedIDs: 78acffff8cd0ffff84d8ffff2ce0ffff42e5ffff7ce8ffffeaeeffffcafaffff6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -640,5 +640,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -1500
-  m_LastVerticalScrollValue: 91.89331
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
