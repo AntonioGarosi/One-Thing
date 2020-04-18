@@ -31,6 +31,7 @@ public class TextBehavior : MonoBehaviour {
 
     void Start() {       
         text = transform.GetComponent<Text>();
+        text.color = GameManager.Instance.primaryColor;
         Color tmp = text.color;
         tmp.a = 0;
         text.color = tmp;

@@ -74,3 +74,12 @@ Beyond meals, I had to waste a couple of hours for remote IT assistance (on Satu
 ![text](log_media/text.gif)
 
 We're getting somewhere.
+
+## Sunday 19th
+
+### 00:25
+I know this is not a primary goal, but I found a lovely font I want to use!
+
+![font](log_media/font.jpg)
+
+Thank you [Philippe Moesch](https://www.behance.net/philippemoesch) for designing it and letting anyone in the world to use it for free.
