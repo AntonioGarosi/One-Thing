@@ -50,3 +50,10 @@ The next steps will be to make a development roadmap and start to prototype the 
 ### 14:29
 I haven't wrote a single line of code yet, but it's definitely time for a lunch break.
 ![lunch](log_media/lunch.jpg)
+
+### 17:08
+After two hours of coding I was able just to test a very dull UI experiment.
+
+![First test](log_media/first-test.jpg)
+
+But - hey ! - at least it works.
