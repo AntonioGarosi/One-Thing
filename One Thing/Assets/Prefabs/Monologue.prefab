@@ -94,6 +94,7 @@ MonoBehaviour:
   fontMaxSize: 57
   fadeTime: 0.4
   bounceLeap: 4
+  fuzzRange: {x: 1, y: 7}
   bouncePeriod: 8
   bounceTime: 0.2
   bounceFrequency: 0.5

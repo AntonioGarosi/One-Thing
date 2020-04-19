@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Monologue : MonoBehaviour {    
+public class Monologue : MonoBehaviour {
+    private string id;
     private Text text;
-    string message = "I only have One Thing"; // placeholder text
+    string message = "Placeholder"; // placeholder text
     public int fontMinSize = 32;
     public int fontMaxSize = 57;
 
@@ -15,22 +16,32 @@ public class Monologue : MonoBehaviour {
 
     private bool bounceFlag; // check in bounce state or not
     public int bounceLeap = 4; // how much the text is bounced
+
+    public Vector2 fuzzRange = new Vector2(3, 9);
+    private float bounceFuzz; // fuzzy offset for boucePeriod;
     public float bouncePeriod = 8; // every when a bounce state happen
     public float bounceTime = 0.2f; // how long a bounce state lasts
     public float bounceFrequency = 0.5f; // how often a bounce state is set
     public float bounceRate = 0.05f; // how often a bounce effect is repeated inside a bounce state
     private float bounceTimer;
 
-    void Start() {
+    private void Awake() {
         this.GetComponent<RectTransform>().anchorMin = new Vector2(0, 0);
         this.GetComponent<RectTransform>().anchorMax = new Vector2(0, 0);
         this.GetComponent<RectTransform>().pivot = new Vector2(0, 0);
         text = transform.GetComponent<Text>();
+    }
+
+    void Start() {        
         text.color = GameManager.Instance.primaryColor;
         Color tmp = text.color;
         tmp.a = 0;
         text.color = tmp;
-        bounceFlag = false;
+        bounceFuzz = Random.Range(fuzzRange.x, fuzzRange.y);
+        Debug.Log(fuzzRange);
+
+        Debug.Log(bounceFuzz);
+        bounceFlag = false;        
         text.text = message;
         updateSize();
         fadeFlag = true;
@@ -50,15 +61,12 @@ public class Monologue : MonoBehaviour {
             if (Time.time - bounceTimer > bounceTime)
                 bounceFlag = false;
         } else {
-            if ((int)Time.time % bouncePeriod == 0 && Random.value < bounceFrequency) {
+            if ((int)(Time.time + bounceFuzz) % bouncePeriod == 0 && Random.value < bounceFrequency) {
                 bounceFlag = true;
                 bounceTimer = Time.time;
             }
         }
     }
-
-    // metodo per tagliare alcune parole
-    // metodo per riposizionare il testo
 
     public void updateSize() {
         text.fontSize = Random.Range(fontMinSize, fontMaxSize);
@@ -120,5 +128,21 @@ public class Monologue : MonoBehaviour {
             }
         }
         setPosition(tmp);
+    }
+
+    public void setText(string t) {
+        message = t;        
+    }
+
+    public void setMonologue(Message message) {
+        id = message.id;
+        setText(message.text);
+        setPosition(message.initialPosiiton);
+    }
+
+    public bool checkId(string i) {
+        if (id == i)
+            return true;
+        return false;
     }
 }
