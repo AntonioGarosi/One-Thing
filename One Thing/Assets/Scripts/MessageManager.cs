@@ -38,14 +38,36 @@ public class MessageManager : MonoBehaviour {
             GameObject monoPre = Instantiate(monologuePrefab, this.transform, false);            
             monologues.Add(monoPre.GetComponent<Monologue>());
             monologues[i].setMonologue(section.messages[i]);
+            monologues[i].enabled = false;
         }
     
     }
 
     public void shutMonologues() {
         foreach (Monologue m in monologues) {
-            m.fadeOut();
+            m.fadeOut();         
         }
-        // something else
+        // something else ?
+    }
+
+    public void activateMonologues() {
+        foreach (Monologue m in monologues) {
+            m.fadeIn();
+        }
+    }
+
+    public void turnMonologue(int id, bool state) {
+        bool flag = false;
+        int i = 0;
+        while (!flag || i < monologues.Count) {
+            if (monologues[i].checkId(id)) {
+                if (state)
+                    monologues[i].fadeIn();
+                else
+                    monologues[i].fadeOut();
+                flag = true;
+            }
+            i++;
+        }
     }
 }

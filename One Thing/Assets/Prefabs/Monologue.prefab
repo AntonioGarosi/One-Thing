@@ -77,7 +77,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: I only have One Thing
+  m_Text: 
 --- !u!114 &4028840233371017286
 MonoBehaviour:
   m_ObjectHideFlags: 0

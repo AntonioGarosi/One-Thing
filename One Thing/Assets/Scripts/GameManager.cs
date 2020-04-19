@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour {
     public IconManager iconManager;
     
     private void Awake() {
-        if (instance != null && instance != this) {
+       if (instance != null && instance != this) {
             Destroy(this.gameObject);
         } else {
             instance = this;
@@ -138,5 +138,47 @@ public class GameManager : MonoBehaviour {
 
 
     void Update() {
+    }
+
+    // this one reverse the state
+    public bool changeCondition(int section, int id) {
+        bool flag = false;
+        int i = 0;
+        while (!flag || i < gameConditions.Count) {
+            //ugh!
+            if (gameConditions[i].section == section && gameConditions[i].id == id) {
+                Condition tmp = gameConditions[i];
+                tmp.flag = false;
+                gameConditions[i] = tmp;
+                flag = true;
+            }
+            i++;
+        }
+        return flag;
+    }
+
+    public bool changeConditions(int[][] values) {
+        bool flag = true;
+        for (int i = 0; i < values.Length; i++) {
+            if (!changeCondition(values[i][0], values[i][1]))
+                flag = false;
+        }
+        return flag;
+    }
+
+    public bool changeCondition(int section, int id, bool state) {
+        bool flag = false;
+        int i = 0;
+        while (!flag || i < gameConditions.Count) {
+            //ugh!
+            if (gameConditions[i].section == section && gameConditions[i].id == id) {
+                Condition tmp = gameConditions[i];
+                tmp.flag = state;
+                gameConditions[i] = tmp;
+                flag = true;
+            }
+            i++;
+        }
+        return flag;
     }
 }

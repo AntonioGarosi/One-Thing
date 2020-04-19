@@ -10,7 +10,7 @@ public class Monologue : MonoBehaviour {
     public int fontMaxSize = 57;
 
     public float fadeTime = 0.4f;
-    private bool fadeIn;
+    private bool fadeDirection; // true = fade in; false = fade out
     private bool fadeFlag;
 
     private bool bounceFlag; // check in bounce state or not
@@ -39,9 +39,7 @@ public class Monologue : MonoBehaviour {
         bounceFuzz = Random.Range(fuzzRange.x, fuzzRange.y);        
         bounceFlag = false;        
         text.text = message.text;
-        updateSize();
-        fadeFlag = true;
-        fadeIn = true;
+        updateSize();        
     }
 
     void Update() {
@@ -80,7 +78,7 @@ public class Monologue : MonoBehaviour {
     public void fade() {
         Color tmp = text.color;
         float delta = Time.deltaTime / fadeTime;        
-        if (fadeIn) {
+        if (fadeDirection) {
             tmp.a += delta;
             if (tmp.a >= 1) {
                 fadeFlag = false;
@@ -143,6 +141,13 @@ public class Monologue : MonoBehaviour {
 
     public void fadeOut() {
         fadeFlag = true;
-        fadeIn = false;
+        fadeDirection = false;
+        enabled = false;
+    }
+
+    public void fadeIn() {
+        fadeFlag = true;
+        fadeDirection = true;
+        enabled = true;
     }
 }

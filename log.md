@@ -115,3 +115,15 @@ Whoa! Unity and JSONs are so unwieldy!
 
 ### 16:05
 I might not be the smartest tool in the set, but Visual Studio is not doing CMD+Z properly and I'm 93% sure that it's not my fault!
+
+### 16:35
+Ok, now it really feels like I'm stuck into UI testing, because:
+- I enjoy the activity more than thinking about other tasks
+- I get stuck into silly bugs than I might not disrupt the overall functioning, but I can't help but feixing them before moving on.
+
+But to be fair, there's not just UI. I've devised more than I thought I would do of internal functioning, those damn script that you don't see but that hold up everything in place.
+See even if you see this fading, jittering, ominous text...
+![interaction](log_media/interaction.gif)
+... in reality there's a lot going on behind the curtains.
+
+It's tea time.
