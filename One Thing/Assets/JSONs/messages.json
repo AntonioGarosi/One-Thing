@@ -1,0 +1,22 @@
+{
+    "messages": [
+        {
+            "section": 0,
+            "id": 0,
+            "text": "I only have one thing",
+            "initialPosition": {
+                "x": 0,
+                "y": 100
+            }
+        },
+        {
+            "section": 0,
+            "id": 1,
+            "text": "and it is devouring me",
+            "initialPosition": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    ]
+}

@@ -4,14 +4,34 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public struct Message {
-    public Message(string txt = "", string i = "", Vector2 p = new Vector2()) {
-        text = txt;
+    public Message(int s, int i, string txt, Vector2 p) {
+        section = s;
         id = i;
+        text = txt;        
         initialPosiiton = p;
     }
+    public int section;
+    public int id;
     public string text;
-    public string id;
     public Vector2 initialPosiiton;
+}
+
+[System.Serializable]
+public struct ParsingMessage {
+    public int section;
+    public int id;
+    public string text;
+    [System.Serializable]
+    public struct Position {
+        public int x;
+        public int y;
+    }
+    public Position initialPosition;    
+}
+
+[System.Serializable]
+public struct Messages {
+    public ParsingMessage[] messages;
 }
 
 public struct MessageSectionStruct {
@@ -69,6 +89,8 @@ public class GameManager : MonoBehaviour {
 
     public TextAsset conditionFile;
     public List<Condition> gameConditions = new List<Condition>();
+    public TextAsset messagesFile;
+    public List<Message> gameMessages = new List<Message>();
 
     public List<InteractionSectionStruct> interactionSectionData = new List<InteractionSectionStruct>();
     public IconManager iconManager;
@@ -82,23 +104,27 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
-        // Game conditions initialization
+        // Game conditions iniialization
         Conditions c = JsonUtility.FromJson<Conditions>(conditionFile.text);
         foreach (Condition condition in c.conditions) {
             gameConditions.Add(condition);
         }
 
-        foreach (Condition co in gameConditions) {
-            Debug.Log(co.id);
+        // Game messages initialization
+        Messages m = JsonUtility.FromJson<Messages>(messagesFile.text);
+        foreach (ParsingMessage mes in m.messages) {
+            Message tmp = new Message(mes.section, mes.id, mes.text, new Vector2(mes.initialPosition.x, mes.initialPosition.y));           
+            gameMessages.Add(tmp);
         }
-
+     
         // Message sections data initialization
         MessageSectionStruct section = new MessageSectionStruct();
         section.messages = new List<Message>();
-        Message message = new Message("I only have One Thing", "0-0", new Vector2(0, 100));
-        section.messages.Add(message);
-        message = new Message("and it is devouring me", "0-1", new Vector2(0, 0));
-        section.messages.Add(message);
+        foreach (Message mes in gameMessages) {
+            if (mes.section == 0) {
+                section.messages.Add(mes);
+            }
+        }
         messageSectionData.Add(section);
 
         // Message manager setup

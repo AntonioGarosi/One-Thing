@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Monologue : MonoBehaviour {
-    private string id;
+    private Message message;
     private Text text;
-    string message = "Placeholder"; // placeholder text
     public int fontMinSize = 32;
     public int fontMaxSize = 57;
 
@@ -39,7 +38,7 @@ public class Monologue : MonoBehaviour {
         text.color = tmp;
         bounceFuzz = Random.Range(fuzzRange.x, fuzzRange.y);        
         bounceFlag = false;        
-        text.text = message;
+        text.text = message.text;
         updateSize();
         fadeFlag = true;
         fadeIn = true;
@@ -127,17 +126,17 @@ public class Monologue : MonoBehaviour {
     }
 
     public void setText(string t) {
-        message = t;        
+        message.text = t;        
     }
 
-    public void setMonologue(Message message) {
-        id = message.id;
-        setText(message.text);
-        setPosition(message.initialPosiiton);
+    public void setMonologue(Message m) {
+        message.id = m.id;
+        setText(m.text);
+        setPosition(m.initialPosiiton);
     }
 
-    public bool checkId(string i) {
-        if (id == i)
+    public bool checkId(int i) {
+        if (message.id == i)
             return true;
         return false;
     }

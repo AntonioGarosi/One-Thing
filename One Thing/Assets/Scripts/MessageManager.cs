@@ -12,7 +12,7 @@ public class MessageManager : MonoBehaviour {
     void Update() {     
     }
 
-    public void setMonologuePosition(string id, Vector2 pos) {
+    public void setMonologuePosition(int id, Vector2 pos) {
         bool flag = false;
         short i = 0;
         while (!flag || i < monologues.Count) {
