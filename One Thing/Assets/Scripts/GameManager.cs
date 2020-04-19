@@ -4,16 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public struct Message {
-    public Message(int s, int i, string txt, Vector2 p) {
+    public Message(int s, int i, string txt, Vector2 p, Condition starter) {
         section = s;
         id = i;
         text = txt;        
         initialPosiiton = p;
+        starterCondition = starter;
     }
     public int section;
     public int id;
     public string text;
     public Vector2 initialPosiiton;
+    public Condition starterCondition;
 }
 
 [System.Serializable]
@@ -26,7 +28,8 @@ public struct ParsingMessage {
         public int x;
         public int y;
     }
-    public Position initialPosition;    
+    public Position initialPosition;
+    public Condition starterCondition;
 }
 
 [System.Serializable]
@@ -41,10 +44,10 @@ public struct MessageSectionStruct {
 
 [System.Serializable]
 public struct Condition {
-    public Condition(int s, int i) {
+    public Condition(int s, int i, bool f) {
         section = s;
         id = i;
-        flag = false;
+        flag = f;
     }
     public int section;
     public int id;
@@ -113,7 +116,12 @@ public class GameManager : MonoBehaviour {
         // Game messages initialization
         Messages m = JsonUtility.FromJson<Messages>(messagesFile.text);
         foreach (ParsingMessage mes in m.messages) {
-            Message tmp = new Message(mes.section, mes.id, mes.text, new Vector2(mes.initialPosition.x, mes.initialPosition.y));           
+            Message tmp = new Message(
+                mes.section,
+                mes.id,
+                mes.text,
+                new Vector2(mes.initialPosition.x, mes.initialPosition.y),
+                new Condition(mes.starterCondition.section, mes.starterCondition.id, mes.starterCondition.flag));           
             gameMessages.Add(tmp);
         }
      
@@ -176,9 +184,23 @@ public class GameManager : MonoBehaviour {
                 tmp.flag = state;
                 gameConditions[i] = tmp;
                 flag = true;
+                messageManager.SendMessage("checkMonologueForCondition", new Vector2(gameConditions[i].section, gameConditions[i].id));
             }
             i++;
         }
         return flag;
+    }
+
+    public bool checkCondition(int section, int id) {
+        for (int i = 0; i < gameConditions.Count; i++) {
+            if (gameConditions[i].section == section && gameConditions[i].id == id) {
+                return gameConditions[i].flag;
+            }
+        }
+        return false;
+    }
+
+    public void test() {
+        changeCondition(0, 1, true);
     }
 }

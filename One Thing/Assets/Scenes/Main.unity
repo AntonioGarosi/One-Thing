@@ -352,8 +352,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1576997220}
-        m_MethodName: activateMonologues
+      - m_Target: {fileID: 718941046}
+        m_MethodName: test
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

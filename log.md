@@ -127,3 +127,10 @@ See even if you see this fading, jittering, ominous text...
 ... in reality there's a lot going on behind the curtains.
 
 It's tea time.
+
+### 22:24
+Probably my jam would have taken me nowhere, but having my workflow interrupted so many times by external factors surely has doomed it.
+
+Reminder for the next jam: keep distractions out of the door. Especially the phone. Turn it off, close it insde a safe and throw that into a dumpters. If you like what you're doing, during a jam you shouldn't be distracted by any trivial topic.
+
+Few hours from the end of the Compo deadline I'm dead sure that my game will be incomplete, and considering tomorrow is a workday hardly I'll take it anywhere closer for the Jam deadline. However, this doesn't that all is lost and I should stop. The process is still fun and I should see where it goes for more.

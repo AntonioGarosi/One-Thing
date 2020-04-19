@@ -139,6 +139,10 @@ public class Monologue : MonoBehaviour {
         return false;
     }
 
+    public int getSection() { return message.section; }
+    public int getId() { return message.id; }
+    public Condition getStarterCondition() { return message.starterCondition; }
+
     public void fadeOut() {
         fadeFlag = true;
         fadeDirection = false;
@@ -150,4 +154,6 @@ public class Monologue : MonoBehaviour {
         fadeDirection = true;
         enabled = true;
     }
+
+
 }

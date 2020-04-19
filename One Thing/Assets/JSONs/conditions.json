@@ -3,14 +3,14 @@
         {
             "section": 0,
             "id": 0,
-            "flag": false,
-            "comment":  "asd"            
+            "flag": true,
+            "comment":  ""            
         },
         {
             "section": 0,
             "id": 1,
-            "flag": true,
-            "comment":  "dsa"
+            "flag": false,
+            "comment":  ""
         }
     ]
 }

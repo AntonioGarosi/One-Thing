@@ -6,9 +6,9 @@ public class MessageManager : MonoBehaviour {
     public GameObject monologuePrefab;
     public List<Monologue> monologues = new List<Monologue>();
 
-    void Start() {        
+    void Start() {
     }
-    
+
     void Update() {     
     }
 
@@ -40,14 +40,18 @@ public class MessageManager : MonoBehaviour {
             monologues[i].setMonologue(section.messages[i]);
             monologues[i].enabled = false;
         }
-    
+
+        foreach (Monologue m in monologues) {       
+            if (GameManager.Instance.checkCondition(m.getSection(), m.getId())){                
+                m.fadeIn();
+            }
+        }
     }
 
     public void shutMonologues() {
         foreach (Monologue m in monologues) {
             m.fadeOut();         
         }
-        // something else ?
     }
 
     public void activateMonologues() {
@@ -56,18 +60,12 @@ public class MessageManager : MonoBehaviour {
         }
     }
 
-    public void turnMonologue(int id, bool state) {
-        bool flag = false;
-        int i = 0;
-        while (!flag || i < monologues.Count) {
-            if (monologues[i].checkId(id)) {
-                if (state)
-                    monologues[i].fadeIn();
-                else
-                    monologues[i].fadeOut();
-                flag = true;
+    public void checkMonologueForCondition(Vector2 c) {
+        for (int i = 0; i < monologues.Count; i++) {
+            Condition tmp = monologues[i].getStarterCondition();
+            if (tmp.section == c.x || tmp.id == c.y) {
+                monologues[i].fadeIn();
             }
-            i++;
         }
     }
 }
