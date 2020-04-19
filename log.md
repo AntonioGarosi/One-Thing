@@ -83,3 +83,18 @@ I know this is not a primary goal, but I found a lovely font I want to use!
 ![font](log_media/font.jpg)
 
 Thank you [Philippe Moesch](https://www.behance.net/philippemoesch) for designing it and letting anyone in the world to use it for free.
+
+### 02:54
+As expected, I was slower than expected.
+
+I made many more tests and implementations on the UI/UX side and their management. If I focused a lot on this part of the game it's because:
+- The game will essentially be a guided interaction, so the UI should be really fine-tuned;
+- I got lost into a stupid bug over UI positioning for more than one hour and I felt incredibly stupid;
+
+![update](log_media/update.gif)
+
+The overall feel is still incredibly crude and undefined, but many more things are becoming clearer in my vision.
+
+Now it's time some nap.
+
+Tomorrow I'll start integrating the various managers, setting game parts parameters and thinking on the assets.

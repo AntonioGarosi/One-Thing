@@ -65,7 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ButtonBehavior.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\TextBehavior.cs" />
+    <Compile Include="Assets\Scripts\MessageManager.cs" />
+    <Compile Include="Assets\Scripts\Monologue.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/antonio/Desktop/Ludum Dare 46/One Thing/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
