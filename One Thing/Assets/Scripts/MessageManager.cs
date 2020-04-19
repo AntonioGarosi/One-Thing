@@ -41,4 +41,11 @@ public class MessageManager : MonoBehaviour {
         }
     
     }
+
+    public void shutMonologues() {
+        foreach (Monologue m in monologues) {
+            m.fadeOut();
+        }
+        // something else
+    }
 }

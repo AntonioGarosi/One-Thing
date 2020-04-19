@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonBehavior : MonoBehaviour
-{
+public class ButtonBehavior : MonoBehaviour {
     public Color defaultColor;
     public Color highlightColor;
     public int highlightOffset = 30;
@@ -12,8 +11,7 @@ public class ButtonBehavior : MonoBehaviour
     private Image targetImage;
     private Image iconImage;
 
-    void Start()
-    {
+    void Start() {
         defaultColor = new Color(0.6367924f, 0.7196355f, 1.0f, 1.0f);
         highlightColor = GameManager.Instance.primaryColor;
         // How to deal with black pixels?
@@ -28,7 +26,7 @@ public class ButtonBehavior : MonoBehaviour
         transform.GetComponent<Button>().colors = tmpBlock;
     }
 
-    void Update()
-    {   
+    void Update() {
+
     }
 }

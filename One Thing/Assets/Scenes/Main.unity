@@ -353,7 +353,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1576997220}
-        m_MethodName: randomizeMonologuesPositions
+        m_MethodName: shutMonologues
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

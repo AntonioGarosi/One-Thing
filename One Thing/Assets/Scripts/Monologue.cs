@@ -37,10 +37,7 @@ public class Monologue : MonoBehaviour {
         Color tmp = text.color;
         tmp.a = 0;
         text.color = tmp;
-        bounceFuzz = Random.Range(fuzzRange.x, fuzzRange.y);
-        Debug.Log(fuzzRange);
-
-        Debug.Log(bounceFuzz);
+        bounceFuzz = Random.Range(fuzzRange.x, fuzzRange.y);        
         bounceFlag = false;        
         text.text = message;
         updateSize();
@@ -51,8 +48,6 @@ public class Monologue : MonoBehaviour {
     void Update() {
         if (fadeFlag) {
             fade();
-        } else {
-            fadeIn = false;
         }
 
         if (bounceFlag) {
@@ -97,6 +92,7 @@ public class Monologue : MonoBehaviour {
             if (tmp.a <= 0) {
                 fadeFlag = false;
                 tmp.a = 0;
+                //send a message to manager?
             }
         }
         text.color = tmp;
@@ -144,5 +140,10 @@ public class Monologue : MonoBehaviour {
         if (id == i)
             return true;
         return false;
+    }
+
+    public void fadeOut() {
+        fadeFlag = true;
+        fadeIn = false;
     }
 }
