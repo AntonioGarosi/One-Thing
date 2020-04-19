@@ -109,3 +109,6 @@ I'm definitely behind any reasonable schedule for a Compo submission, let's see 
 Nonetheless, what I'm realizing is that even if I'm not to craft anything playable, the process is letting me understand more about patterns, algorithms and UI/UX abstractions.
 
 And that's a really valuable lesson!
+
+### 14:44
+Whoa! Unity and JSONs are so unwieldy!
