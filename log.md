@@ -134,3 +134,8 @@ Probably my jam would have taken me nowhere, but having my workflow interrupted 
 Reminder for the next jam: keep distractions out of the door. Especially the phone. Turn it off, close it insde a safe and throw that into a dumpters. If you like what you're doing, during a jam you shouldn't be distracted by any trivial topic.
 
 Few hours from the end of the Compo deadline I'm dead sure that my game will be incomplete, and considering tomorrow is a workday hardly I'll take it anywhere closer for the Jam deadline. However, this doesn't that all is lost and I should stop. The process is still fun and I should see where it goes for more.
+
+## Monday 20th
+
+### 00:19
+Compo submission is a couple hours from now. I think I nailed 1/5th-1/4th of the tasks I needed to do for crafting my whole vision.

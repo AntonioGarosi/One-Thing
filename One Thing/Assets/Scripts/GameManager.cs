@@ -19,21 +19,22 @@ public struct Message {
 }
 
 [System.Serializable]
+public struct Position {
+    public int x;
+    public int y;
+}
+
+[System.Serializable]
 public struct ParsingMessage {
     public int section;
     public int id;
-    public string text;
-    [System.Serializable]
-    public struct Position {
-        public int x;
-        public int y;
-    }
+    public string text;    
     public Position initialPosition;
     public Condition starterCondition;
 }
 
 [System.Serializable]
-public struct Messages {
+struct Messages {
     public ParsingMessage[] messages;
 }
 
@@ -55,20 +56,40 @@ public struct Condition {
 }
 
 [System.Serializable]
-public struct Conditions {
+struct Conditions {
     public Condition[] conditions;
 }
 
+[System.Serializable]
+struct ParsingIcon {    
+    public int section;
+    public int id;
+    public string sprite;
+    public Position position;
+    public Condition[] starterConditions;
+    public Condition[] activatingConditions;
+}
+
+[System.Serializable]
+struct Icons {
+    public ParsingIcon[] icons;
+}
+
 public struct Icon {
-    public Icon(string i) {
-        id = i;        
-        conditions = new List<string>();
-        activactionConditions = new List<string>();
+    public Icon(int s, int i, string sp, Vector2 p, List<Condition>sc, List<Condition>ac) {
+        section = s;
+        id = i;
+        sprite = "Assets/Sprites/Icons/" + sp;
+        position = p;
+        starterConditions = sc;
+        activatingConditions = ac;
     }
-    
-    string id;
-    List<string> conditions;
-    List<string> activactionConditions;
+    public int section;
+    public int id;
+    public string sprite;
+    public Vector2 position;
+    public List<Condition> starterConditions;
+    public List<Condition> activatingConditions;
 }
 
 public struct InteractionSectionStruct {
@@ -87,16 +108,20 @@ public class GameManager : MonoBehaviour {
     }
 
     public Color primaryColor = new Color(0.6367924f, 0.7196355f, 1.0f, 1.0f);
-    public List<MessageSectionStruct> messageSectionData = new List<MessageSectionStruct>();
-    public MessageManager messageManager;
+    public Color invisibleColor = new Color(0, 0, 0, 0);
 
     public TextAsset conditionFile;
-    public List<Condition> gameConditions = new List<Condition>();
     public TextAsset messagesFile;
+    public TextAsset iconsFile;
+    public List<Condition> gameConditions = new List<Condition>();
     public List<Message> gameMessages = new List<Message>();
+    public List<Icon> gameIcons = new List<Icon>();
+
+    public IconManager iconManager;
+    public MessageManager messageManager;
 
     public List<InteractionSectionStruct> interactionSectionData = new List<InteractionSectionStruct>();
-    public IconManager iconManager;
+    public List<MessageSectionStruct> messageSectionData = new List<MessageSectionStruct>();
     
     private void Awake() {
        if (instance != null && instance != this) {
@@ -124,26 +149,43 @@ public class GameManager : MonoBehaviour {
                 new Condition(mes.starterCondition.section, mes.starterCondition.id, mes.starterCondition.flag));           
             gameMessages.Add(tmp);
         }
-     
-        // Message sections data initialization
-        MessageSectionStruct section = new MessageSectionStruct();
-        section.messages = new List<Message>();
+
+        // Game icons initializations
+        Icons i = JsonUtility.FromJson<Icons>(iconsFile.text);
+        foreach (ParsingIcon icon in i.icons) {
+            gameIcons.Add(new Icon(
+                icon.section,
+                icon.id,
+                icon.sprite,
+                new Vector2(icon.position.x, icon.position.y),
+                new List<Condition>(icon.starterConditions),
+                new List<Condition>(icon.activatingConditions)
+                ));            
+        }
+
+        // Ssection message setup
+        MessageSectionStruct messageSection = new MessageSectionStruct();
+        messageSection.messages = new List<Message>();
         foreach (Message mes in gameMessages) {
             if (mes.section == 0) {
-                section.messages.Add(mes);
+                messageSection.messages.Add(mes);
             }
         }
-        messageSectionData.Add(section);
-
-        // Message manager setup
+        messageSectionData.Add(messageSection);        
         messageManager.setupManager(messageSectionData[0]);
 
-        // Interaction section data initialization
+        // Section interactors setup
+        InteractionSectionStruct interactionSection = new InteractionSectionStruct();
 
-        // Icon manager setup
-        // iconManager.setupManager(InteractionSectionStruct[0]);
+        interactionSection.icons = new List<Icon>();
+        foreach (Icon icon in gameIcons) {
+            if (icon.section == 0) {
+                interactionSection.icons.Add(icon);
+            }
+        }
+        interactionSectionData.Add(interactionSection);
+        iconManager.setupManager(interactionSectionData[0]);
     }
-
 
     void Update() {
     }

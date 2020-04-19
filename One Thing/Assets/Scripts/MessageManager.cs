@@ -41,7 +41,7 @@ public class MessageManager : MonoBehaviour {
             monologues[i].enabled = false;
         }
 
-        foreach (Monologue m in monologues) {       
+            foreach (Monologue m in monologues) {       
             if (GameManager.Instance.checkCondition(m.getSection(), m.getId())){                
                 m.fadeIn();
             }

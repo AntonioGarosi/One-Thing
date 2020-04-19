@@ -63,11 +63,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ButtonBehavior.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\IconManager.cs" />
     <Compile Include="Assets\Scripts\MessageManager.cs" />
     <Compile Include="Assets\Scripts\Monologue.cs" />
+    <Compile Include="Assets\Scripts\Symbol.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/antonio/Desktop/Ludum Dare 46/One Thing/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

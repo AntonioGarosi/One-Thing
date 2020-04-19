@@ -128,9 +128,8 @@ public class Monologue : MonoBehaviour {
     }
 
     public void setMonologue(Message m) {
-        message.id = m.id;
-        setText(m.text);
-        setPosition(m.initialPosiiton);
+        message = m;
+        setPosition(message.initialPosiiton);
     }
 
     public bool checkId(int i) {
@@ -154,6 +153,4 @@ public class Monologue : MonoBehaviour {
         fadeDirection = true;
         enabled = true;
     }
-
-
 }

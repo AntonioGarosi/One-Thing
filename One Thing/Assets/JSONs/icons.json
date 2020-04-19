@@ -1,0 +1,27 @@
+{
+    "icons": [
+        {
+            "sector": 0,
+            "id": 0,
+            "sprite": "placeholder.png",
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "starterConditions": [
+                {
+                    "section": 0,
+                    "id": 0,
+                    "flag": true
+                }
+            ],
+            "activatingConditions": [
+                {
+                    "section": 0,
+                    "id": 1,
+                    "flag": true
+                }
+            ]
+        }
+    ]
+}
