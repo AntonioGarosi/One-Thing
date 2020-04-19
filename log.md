@@ -112,3 +112,6 @@ And that's a really valuable lesson!
 
 ### 14:44
 Whoa! Unity and JSONs are so unwieldy!
+
+### 16:05
+I might not be the smartest tool in the set, but Visual Studio is not doing CMD+Z properly and I'm 93% sure that it's not my fault!
