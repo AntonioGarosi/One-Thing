@@ -98,3 +98,12 @@ The overall feel is still incredibly crude and undefined, but many more things a
 Now it's time some nap.
 
 Tomorrow I'll start integrating the various managers, setting game parts parameters and thinking on the assets.
+
+### 12:55
+After plenty of sleep, I woke with the idea of of keep on testing with UI elements and game managers to the point where the game implementation was nothing more than defining global variables and arrays.
+
+I was wise and naive at the same time. Wise because this approach is saving the future perplexities regarding how to achieve certain interactions that I didn't foresaw. Naive because I totally forgot everything I knew about under-the-hood Unity functionalities, and I'm stumbling over even the most stupid bugs (goddam!!! You should scrpt GameObject associations at *Awake()*, not *Start()*!!!).
+
+What I'm realizing is that even if I'm not to craft anything playable, the process is letting me understand more about patterns, algorithms and UI/UX abstractions.
+
+And that's a really valuable lesson!
