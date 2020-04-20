@@ -139,3 +139,6 @@ Few hours from the end of the Compo deadline I'm dead sure that my game will be 
 
 ### 00:19
 Compo submission is a couple hours from now. I think I nailed 1/5th-1/4th of the tasks I needed to do for crafting my whole vision.
+
+## 23:33
+It was a day full of job-related work, so no progress even for the jam submission, which is a bit lame. But during the day I was often thinking about how to change that manager, how to fine-tune that parses, how to coordinate those events and so on. All day I was thinking about getting back to code One Thing. And now I can. Ludum Dare might be over, but not my will to continue.
