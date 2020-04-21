@@ -1,32 +1,19 @@
 ﻿<Properties StartupConfiguration="{FCC7D10F-BF80-CC78-EDEE-68DB318133B7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/IconManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/JSONs/icons.json">
     <Files>
       <File FileName="Assets/Scripts/GameManager.cs" Line="266" Column="6" />
-      <File FileName="Assets/JSONs/messages.json" Line="26" Column="24" />
-      <File FileName="Assets/Scripts/MessageManager.cs" Line="48" Column="10" />
+      <File FileName="Assets/Scripts/MessageManager.cs" />
       <File FileName="Assets/Scripts/Symbol.cs" Line="40" Column="53" />
-      <File FileName="Assets/Scripts/Monologue.cs" Line="143" Column="53" />
+      <File FileName="Assets/Scripts/Monologue.cs" />
+      <File FileName="Assets/Scripts/IconManager.cs" Line="7" Column="10" NotebookId="1" />
       <File FileName="Assets/JSONs/conditions.json" Line="17" Column="20" NotebookId="1" />
+      <File FileName="Assets/JSONs/messages.json" Line="26" Column="24" NotebookId="1" />
       <File FileName="Assets/JSONs/icons.json" Line="14" Column="28" NotebookId="1" />
-      <File FileName="Assets/Scripts/IconManager.cs" Line="32" Column="71" NotebookId="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="One Thing" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="IconManager.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="228dc0b9-ddfb-495b-8aff-77755ec0ef65" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8a178631-9ed8-48aa-b3bc-0c4101ee5564" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -226,7 +226,9 @@ public class GameManager : MonoBehaviour {
                 tmp.flag = state;
                 gameConditions[i] = tmp;
                 flag = true;
-                messageManager.SendMessage("checkMonologueForCondition", new Vector2(gameConditions[i].section, gameConditions[i].id));
+
+                iconManager.checkSymbolsForCondtions();
+                messageManager.checkMonologuesForCondition(new Vector2(gameConditions[i].section, gameConditions[i].id));                
             }
             i++;
         }

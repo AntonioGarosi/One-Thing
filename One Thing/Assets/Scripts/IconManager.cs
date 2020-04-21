@@ -11,9 +11,8 @@ public class IconManager : MonoBehaviour {
     }
 
     void Update() {
-        
-    }
 
+    }
     public void setupManager(InteractionSectionStruct section) {
     // some operations about RectTransform
         foreach (Icon icon in section.icons) {
@@ -21,13 +20,15 @@ public class IconManager : MonoBehaviour {
             tmp.setSymbol(icon);
             symbols.Add(tmp.GetComponent<Symbol>());
         }
+        checkSymbolsForCondtions();
+    }
 
-        foreach (Symbol symbol in symbols) {            
+    public void checkSymbolsForCondtions() {
+        foreach (Symbol symbol in symbols) {
             if (GameManager.Instance.checkConditions(symbol.getStarterCondition())) {
                 symbol.fade(true);
             }
         }
-    }
-
+    }    
     // check on conditions, sprite rendering, message from gamemanager
 }

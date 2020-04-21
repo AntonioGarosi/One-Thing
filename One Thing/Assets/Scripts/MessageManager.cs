@@ -60,7 +60,7 @@ public class MessageManager : MonoBehaviour {
         }
     }
 
-    public void checkMonologueForCondition(Vector2 c) {
+    public void checkMonologuesForCondition(Vector2 c) {
         for (int i = 0; i < monologues.Count; i++) {
             Condition tmp = monologues[i].getStarterCondition();
             if (tmp.section == c.x || tmp.id == c.y) {

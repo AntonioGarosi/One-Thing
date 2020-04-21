@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Symbol : MonoBehaviour {    
     public int highlightOffset = 30;
@@ -38,13 +39,12 @@ public class Symbol : MonoBehaviour {
             int d = fadeDirection ? 1 : -1;
             Color tmp = iconImage.color;
             tmp.a += (Time.deltaTime/ fadeTime) * d;
-            if (iconImage.color.a >= 1.0f || iconImage.color.a <= 0.0f) {
+            if (tmp.a >= 1.0f || tmp.a <= 0.0f) {
                 fadeFlag = false;
                 if (fadeDirection) {
                     tmp.a = 1;
                 } else {
-                    iconImage.enabled = false;
-                    targetImage.enabled = false;
+                    iconImage.enabled = false;                 
                 }
             }
             iconImage.color = tmp;
@@ -71,6 +71,8 @@ public class Symbol : MonoBehaviour {
             iconImage.color = tmp;
             iconImage.enabled = true;
             targetImage.enabled = true;
+        } else {
+            targetImage.enabled = false;
         }
     }
 }
