@@ -37,12 +37,12 @@ public class MessageManager : MonoBehaviour {
         for (int i = 0; i < section.messages.Count; i++) {
             GameObject monoPre = Instantiate(monologuePrefab, this.transform, false);            
             monologues.Add(monoPre.GetComponent<Monologue>());
-            monologues[i].setMonologue(section.messages[i]);
-            monologues[i].enabled = false;
+            monologues[i].setMonologue(section.messages[i]);            
         }
 
+        // you should check for starter condition!!!!
             foreach (Monologue m in monologues) {       
-            if (GameManager.Instance.checkCondition(m.getSection(), m.getId())){                
+            if (GameManager.Instance.getCondition(m.getStarterCondition())){                
                 m.fadeIn();
             }
         }

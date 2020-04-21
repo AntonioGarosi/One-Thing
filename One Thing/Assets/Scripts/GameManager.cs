@@ -233,13 +233,32 @@ public class GameManager : MonoBehaviour {
         return flag;
     }
 
-    public bool checkCondition(int section, int id) {
+    public bool getCondition(Condition condition) {
         for (int i = 0; i < gameConditions.Count; i++) {
-            if (gameConditions[i].section == section && gameConditions[i].id == id) {
+            if (gameConditions[i].section == condition.section && gameConditions[i].id == condition.id) {
                 return gameConditions[i].flag;
             }
         }
         return false;
+    }
+
+    public bool checkCondition(Condition condition) {
+        for (int i = 0; i < gameConditions.Count; i++) {
+            if (gameConditions[i].section == condition.section &&
+                gameConditions[i].id == condition.id) {
+                return gameConditions[i].flag == condition.flag;
+            }
+        }
+        return false;
+    }    
+
+    public bool checkConditions(List<Condition> conditions) {        
+        for (int i = 0; i < conditions.Count; i++) {
+             if (!checkCondition(conditions[i])) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void test() {

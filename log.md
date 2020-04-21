@@ -142,3 +142,8 @@ Compo submission is a couple hours from now. I think I nailed 1/5th-1/4th of the
 
 ## 23:33
 It was a day full of job-related work, so no progress even for the jam submission, which is a bit lame. But during the day I was often thinking about how to change that manager, how to fine-tune that parses, how to coordinate those events and so on. All day I was thinking about getting back to code One Thing. And now I can. Ludum Dare might be over, but not my will to continue.
+
+## Tuesday 21th
+
+## 01:59
+When a developer doesn't oversee, bugs proliferate

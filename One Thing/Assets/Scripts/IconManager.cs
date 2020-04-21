@@ -17,11 +17,17 @@ public class IconManager : MonoBehaviour {
     public void setupManager(InteractionSectionStruct section) {
     // some operations about RectTransform
         foreach (Icon icon in section.icons) {
-            Symbol tmp = Instantiate(iconPrefab, this.transform, false).GetComponent<Symbol>();
+            Symbol tmp = Instantiate(iconPrefab, this.transform, false).GetComponent<Symbol>();            
             tmp.setSymbol(icon);
-            symbols.Add(tmp.GetComponent<Symbol>());                        
+            symbols.Add(tmp.GetComponent<Symbol>());
+        }
+
+        foreach (Symbol symbol in symbols) {            
+            if (GameManager.Instance.checkConditions(symbol.getStarterCondition())) {
+                symbol.fade(true);
+            }
         }
     }
 
-    // implement fade, check on conditions, sprite rendering
+    // check on conditions, sprite rendering, message from gamemanager
 }

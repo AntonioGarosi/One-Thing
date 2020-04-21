@@ -144,13 +144,11 @@ public class Monologue : MonoBehaviour {
 
     public void fadeOut() {
         fadeFlag = true;
-        fadeDirection = false;
-        enabled = false;
+        fadeDirection = false;     
     }
 
     public void fadeIn() {
         fadeFlag = true;
-        fadeDirection = true;
-        enabled = true;
+        fadeDirection = true;        
     }
 }

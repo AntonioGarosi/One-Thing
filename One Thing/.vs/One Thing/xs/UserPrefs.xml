@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{FCC7D10F-BF80-CC78-EDEE-68DB318133B7}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/IconManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="104" Column="41" />
-      <File FileName="Assets/JSONs/messages.json" Line="16" Column="10" />
-      <File FileName="Assets/Scripts/MessageManager.cs" Line="69" Column="10" />
-      <File FileName="Assets/Scripts/Monologue.cs" Line="132" Column="44" />
-      <File FileName="Assets/Scripts/ButtonBehavior.cs" Line="24" Column="1" NotebookId="1" />
-      <File FileName="Assets/JSONs/conditions.json" Line="6" Column="26" NotebookId="1" />
-      <File FileName="Assets/JSONs/icons.json" Line="1" Column="2" NotebookId="1" />
-      <File FileName="Assets/Scripts/IconManager.cs" Line="26" Column="61" NotebookId="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="266" Column="6" />
+      <File FileName="Assets/JSONs/messages.json" Line="26" Column="24" />
+      <File FileName="Assets/Scripts/MessageManager.cs" Line="48" Column="10" />
+      <File FileName="Assets/Scripts/Symbol.cs" Line="40" Column="53" />
+      <File FileName="Assets/Scripts/Monologue.cs" Line="143" Column="53" />
+      <File FileName="Assets/JSONs/conditions.json" Line="17" Column="20" NotebookId="1" />
+      <File FileName="Assets/JSONs/icons.json" Line="14" Column="28" NotebookId="1" />
+      <File FileName="Assets/Scripts/IconManager.cs" Line="32" Column="71" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f4086592-1c88-40f1-af58-c139b7fb77d0" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="228dc0b9-ddfb-495b-8aff-77755ec0ef65" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

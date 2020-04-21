@@ -3,7 +3,7 @@
         {
             "sector": 0,
             "id": 0,
-            "sprite": "placeholder.png",
+            "sprite": "placeholder",
             "position": {
                 "x": 0,
                 "y": 0
@@ -18,7 +18,7 @@
             "activatingConditions": [
                 {
                     "section": 0,
-                    "id": 1,
+                    "id": 2,
                     "flag": true
                 }
             ]
