@@ -79,7 +79,7 @@ public struct Icon {
     public Icon(int s, int i, string sp, Vector2 p, List<Condition>sc, List<Condition>ac) {
         section = s;
         id = i;
-        sprite = "Assets/Sprites/Icons/" + sp;
+        sprite = "Sprites/Icons/" + sp;
         position = p;
         starterConditions = sc;
         activatingConditions = ac;
@@ -163,7 +163,7 @@ public class GameManager : MonoBehaviour {
                 ));            
         }
 
-        // Ssection message setup
+        // Section message setup
         MessageSectionStruct messageSection = new MessageSectionStruct();
         messageSection.messages = new List<Message>();
         foreach (Message mes in gameMessages) {

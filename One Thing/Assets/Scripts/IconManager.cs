@@ -13,6 +13,7 @@ public class IconManager : MonoBehaviour {
     void Update() {
 
     }
+
     public void setupManager(InteractionSectionStruct section) {
     // some operations about RectTransform
         foreach (Icon icon in section.icons) {
