@@ -1,6 +1,6 @@
-# Log
+# Ludum Dare 46 - Log
 
-## Saturday 18th
+## April 18th
 
 ### 10:00
 Woke up after plenty of sleep but with several hours after the kick-off of Ludum Dare. I went to check the theme, and it ended being the one that I wanted the least... **Keep it alive...**
@@ -75,7 +75,7 @@ Beyond meals, I had to waste a couple of hours for remote IT assistance (on Satu
 
 We're getting somewhere.
 
-## Sunday 19th
+## April 19th
 
 ### 00:25
 I know this is not a primary goal, but I found a lovely font I want to use!
@@ -135,7 +135,7 @@ Reminder for the next jam: keep distractions out of the door. Especially the pho
 
 Few hours from the end of the Compo deadline I'm dead sure that my game will be incomplete, and considering tomorrow is a workday hardly I'll take it anywhere closer for the Jam deadline. However, this doesn't that all is lost and I should stop. The process is still fun and I should see where it goes for more.
 
-## Monday 20th
+## April 20th
 
 ### 00:19
 Compo submission is a couple hours from now. I think I nailed 1/5th-1/4th of the tasks I needed to do for crafting my whole vision.
@@ -143,12 +143,19 @@ Compo submission is a couple hours from now. I think I nailed 1/5th-1/4th of the
 ## 23:33
 It was a day full of job-related work, so no progress even for the jam submission, which is a bit lame. But during the day I was often thinking about how to change that manager, how to fine-tune that parses, how to coordinate those events and so on. All day I was thinking about getting back to code One Thing. And now I can. Ludum Dare might be over, but not my will to continue.
 
-## Tuesday 21st
+## April 21st
 
 ## 01:59
 When a developer doesn't oversee, bugs proliferate
 
-## Wednesday 22nd
+## April 22nd
 
 ## 00:38
 If there were any correlation between idiocy of bugs and amount of satisfaction after fixing them, I should be passing out because of the orgasms.
+
+## April 25nd
+
+## 01:25
+I think I realized that many just don't game-dev in their spare time during their workweek because it's a really demanding task. After a full day of work, with prolonged screen-exposure, you really don't want to get more frustrated for few more hours on some not well-defined game yet.
+
+And yet, when you finally get back to it to implement some new features and they start working, you ask yourself why don't just quite everything in your life and devote completely, body & soul, to game-dev. Seriously, it can be really gratifying.
