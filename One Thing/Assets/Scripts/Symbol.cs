@@ -73,8 +73,14 @@ public class Symbol : MonoBehaviour {
             targetImage.enabled = true;
         } else {
             targetImage.enabled = false;
+            GameManager.Instance.revertConditions(icon.starterConditions);
         }
     }
+
+    public void sendConditionChange() {
+        GameManager.Instance.changeConditions(icon.activatingConditions);
+    }
+
 }
 
 

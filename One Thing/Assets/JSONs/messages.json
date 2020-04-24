@@ -19,11 +19,24 @@
             "text": "and it is devouring me",
             "initialPosition": {
                 "x": 0,
-                "y": 0
+                "y": 50
             },
             "starterCondition": {
                 "section": 0,
                 "id": 1
+            }
+        },
+        {
+            "section": 0,
+            "id": 2,
+            "text": "Every single moment",
+            "initialPosition": {
+                "x": 100,
+                "y": 0
+            },
+            "starterCondition": {
+                "section": 0,
+                "id": 2
             }
         }
     ]

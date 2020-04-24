@@ -207,16 +207,16 @@ public class GameManager : MonoBehaviour {
         return flag;
     }
 
-    public bool changeConditions(int[][] values) {
+    public bool changeConditions(List<Condition> conditions) {
         bool flag = true;
-        for (int i = 0; i < values.Length; i++) {
-            if (!changeCondition(values[i][0], values[i][1]))
-                flag = false;
-        }
+        foreach (Condition c in conditions) {
+            if (!changeCondition(c.section, c.id, c.flag))
+                flag = false;            
+        }        
         return flag;
     }
 
-    public bool changeCondition(int section, int id, bool state) {
+        public bool changeCondition(int section, int id, bool state) {
         bool flag = false;
         int i = 0;
         while (!flag || i < gameConditions.Count) {
@@ -226,11 +226,20 @@ public class GameManager : MonoBehaviour {
                 tmp.flag = state;
                 gameConditions[i] = tmp;
                 flag = true;
-
                 iconManager.checkSymbolsForCondtions();
-                messageManager.checkMonologuesForCondition(new Vector2(gameConditions[i].section, gameConditions[i].id));                
-            }
+                if (state)
+                    messageManager.checkMonologuesForCondition(new Vector2(gameConditions[i].section, gameConditions[i].id));
+            }     
             i++;
+        }
+        return flag;
+    }
+
+    public bool revertConditions(List<Condition> conditions) {
+        bool flag = true;
+        foreach (Condition c in conditions) {
+            if (!changeCondition(c.section, c.id, !c.flag))
+                flag = false;
         }
         return flag;
     }
@@ -241,7 +250,7 @@ public class GameManager : MonoBehaviour {
                 return gameConditions[i].flag;
             }
         }
-        return false;
+        return false; //is this wrong?
     }
 
     public bool checkCondition(Condition condition) {
@@ -251,7 +260,7 @@ public class GameManager : MonoBehaviour {
                 return gameConditions[i].flag == condition.flag;
             }
         }
-        return false;
+        return false; //is this wrong?
     }    
 
     public bool checkConditions(List<Condition> conditions) {        
@@ -263,7 +272,14 @@ public class GameManager : MonoBehaviour {
         return true;
     }
 
-    public void test() {
-        changeCondition(0, 1, true);
+    public void test() {        
+        changeCondition(0, 1, true);        
+    }
+
+    public void logConditions() {
+        Debug.Log("Game conditions");
+        foreach (Condition c in gameConditions) {            
+            Debug.Log(c.section + "/" + c.id + " - " + c.flag);
+        }
     }
 }

@@ -7,11 +7,9 @@ public class IconManager : MonoBehaviour {
     public List<Symbol> symbols = new List<Symbol>();
 
     void Start() {
-        
     }
 
     void Update() {
-
     }
 
     public void setupManager(InteractionSectionStruct section) {
@@ -30,6 +28,7 @@ public class IconManager : MonoBehaviour {
                 symbol.fade(true);
             }
         }
-    }    
+    }
+
     // check on conditions, sprite rendering, message from gamemanager
 }
