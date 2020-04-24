@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{FCC7D10F-BF80-CC78-EDEE-68DB318133B7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/IconManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Monologue.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="215" Column="39" />
-      <File FileName="Assets/Scripts/MessageManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Symbol.cs" Line="83" Column="2" />
-      <File FileName="Assets/Scripts/Monologue.cs" Line="29" Column="47" />
-      <File FileName="Assets/Scripts/IconManager.cs" Line="27" Column="49" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="246" Column="1" />
+      <File FileName="Assets/Scripts/MessageManager.cs" Line="59" Column="21" />
+      <File FileName="Assets/Scripts/Symbol.cs" Line="74" Column="17" />
+      <File FileName="Assets/Scripts/Monologue.cs" Line="93" Column="27" />
+      <File FileName="Assets/Scripts/IconManager.cs" Line="21" Column="10" />
       <File FileName="Assets/JSONs/conditions.json" Line="21" Column="6" NotebookId="1" />
-      <File FileName="Assets/JSONs/messages.json" Line="8" Column="10" NotebookId="1" />
-      <File FileName="Assets/JSONs/icons.json" Line="24" Column="14" NotebookId="1" />
+      <File FileName="Assets/JSONs/messages.json" Line="35" Column="23" NotebookId="1" />
+      <File FileName="Assets/JSONs/icons.json" Line="14" Column="28" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +16,7 @@
           <Node name="One Thing" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="IconManager.cs" selected="True" />
+                <Node name="Monologue.cs" selected="True" />
               </Node>
             </Node>
           </Node>

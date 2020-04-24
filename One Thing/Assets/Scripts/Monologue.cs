@@ -69,10 +69,12 @@ public class Monologue : MonoBehaviour {
         int mx, my;
         mx = (int)Random.Range(-bounceLeap, bounceLeap); 
         my = (int)Random.Range(-bounceLeap, bounceLeap);
-        Vector3 tmp = transform.GetComponent<RectTransform>().position;
+        Vector3 tmp = transform.GetComponent<RectTransform>().localPosition;
         tmp.x += mx;
-        tmp.y += my;
-        transform.GetComponent<RectTransform>().position = tmp;
+        tmp.y += my;        
+        if (transform.parent.GetComponent<RectTransform>().rect.Contains(tmp)) {
+            transform.GetComponent<RectTransform>().localPosition = tmp;
+        }
     }
 
     public void fade() {
